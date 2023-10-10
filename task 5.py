@@ -42,3 +42,15 @@ bbbacacac, на это уйдёт 9 ходов, ниже указаны стро
 @author: workk
 """
 
+string = input('Введите строку, в которой нужно будет переместить символ в начало строки: ')
+symball = input('Введите символ: ')
+sum = 0
+massiv = []
+for index, symb in enumerate(string):
+    if symb==symball:
+        massiv.append(index)
+        sum = sum + index
+
+sum = sum - ((len(massiv)-1)*len(massiv)/2)
+print(int(sum))
+
